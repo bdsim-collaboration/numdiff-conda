@@ -1,0 +1,23 @@
+{% set version = "5.9.0" %}
+
+package:
+  name: numdiff
+  version: {{ version }}
+
+source:
+  - url: http://www.mirrorservice.org/sites/download.savannah.gnu.org/releases/numdiff/numdiff-{{ version }}.tar.gz
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - make
+  host:
+    - gmp
+    - gettext
+  run:
+
+test:
+  imports:
+
+about:
+  home:
